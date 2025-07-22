@@ -21,178 +21,201 @@
   <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
   <script type="text/jsx">
 
-    var DATA = {
-      name: "Hey, I'm Shahin",
-      subtext: "Software Engineer based in Trivandrum, India",
-      jobStatus: "Automation Engineer @ Carestack",
-      githubURL: 'https://github.com/ShahinMohamed',
-      linkedinURL: 'https://www.linkedin.com/in/shahin-mohamed-pk',
-      resumeURL: 'https://shahinmohamed.github.io/files/resume.pdf'
-    }
+                                                                    var DATA = {
+                                                                      name: "Hey, I'm Shahin",
+                                                                      subtext: "Software Engineer based in Trivandrum, India",
+                                                                      jobStatus: "Automation Engineer @ Carestack",
+                                                                      githubURL: 'https://github.com/ShahinMohamed',
+                                                                      linkedinURL: 'https://www.linkedin.com/in/shahin-mohamed-pk',
+                                                                      resumeURL: 'https://shahinmohamed.github.io/files/resume.pdf'
+                                                                    }
 
-    var App = React.createClass({
-      render: function() {
-        return(
-          <div className="app">
-            <Left
-              name={this.props.profileData.name}
-              subtext={this.props.profileData.subtext}
-              jobStatus={this.props.profileData.jobStatus}
-              githubURL={this.props.profileData.githubURL}
-              linkedinURL={this.props.profileData.linkedinURL}
-            />
-            <Right
-              intro={this.props.profileData.intro}
-              resumeURL={this.props.profileData.resumeURL}
-            />
-          </div>
-        );
-      }
-    });
+                                                                    var App = React.createClass({
+                                                                      render: function() {
+                                                                        return(
+                                                                          <div className="app">
+                                                                            <Left
+                                                                              name={this.props.profileData.name}
+                                                                              subtext={this.props.profileData.subtext}
+                                                                              jobStatus={this.props.profileData.jobStatus}
+                                                                              githubURL={this.props.profileData.githubURL}
+                                                                              linkedinURL={this.props.profileData.linkedinURL}
+                                                                            />
+                                                                            <Right
+                                                                              intro={this.props.profileData.intro}
+                                                                              resumeURL={this.props.profileData.resumeURL}
+                                                                            />
+                                                                          </div>
+                                                                        );
+                                                                      }
+                                                                    });
 
-    var Left = React.createClass({
-      render: function() {
-        return(
-          <div className="left">
-            <div className="bg-img"></div>
-            <div className="left-inner">
-              <div className="info">
-                <h2 className="name">{this.props.name}</h2>
-                <div className="subtext">{this.props.subtext}</div>
-                <div className="jobStatus">{this.props.jobStatus}</div>
-                <div className="social-links">
-                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
-                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      }
-    });
+                                                                    var Left = React.createClass({
+                                                                      render: function() {
+                                                                        return(
+                                                                          <div className="left">
+                                                                            <div className="bg-img"></div>
+                                                                            <div className="left-inner">
+                                                                              <div className="info">
+                                                                                <h2 className="name">{this.props.name}</h2>
+                                                                                <div className="subtext">{this.props.subtext}</div>
+                                                                                <div className="jobStatus">{this.props.jobStatus}</div>
+                                                                                <div className="social-links">
+                                                                                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                                                                                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        );
+                                                                      }
+                                                                    });
 
-    var Right = React.createClass({
-      render: function() {
-        return(
-          <div className="right">
-            <div className="right-inner">
-              <div className="introduction">
-                <h4>Intro</h4>
-                <div className="content">
-                  <p className="intro-p">
-                    I am a Software Development Engineer with over 3 years of experience, specializing in API and UI automation. I have hands-on expertise with tools like xUnit, Cypress, and Playwright, and lead performance testing efforts to ensure high application reliability. I build automation tools and suites that streamline regression testing and improve development efficiency. Known for optimizing database performance, implementing cost-effective solutions, and mentoring junior team members in automation practices, fostering a culture of continuous learning and improvement.
-                  </p>
-                  
-                </div>
-              </div>
-              <div className="skills">
-                <h4>Skills</h4>
-                <div className="content">
-                  <div className="skill-category">
-                    <strong>Languages: &nbsp;</strong>
-                    <span>C#, JavaScript, TypeScript,
-                      Python, SQL</span>
-                  </div>
-                  <div className="skill-category">
-                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
-                    <span>NET Framework / .NET Core,
-                      Hangfire, Razor, Xunit, Playwright
-                      </span>
-                  </div>
-                  <div className="skill-category">
-                    <strong>Others: &nbsp;</strong>
-                    <span>Jmeter, Pact.io, CI/CD, Azure, Jupyter, Git
-                      scripting</span>
-                  </div>
-                </div>
-              </div>
-              <div className="education">
-                <h4>Education</h4>
-                <div className="content">
-                  <div className="duration">2017 — 2021</div>
-                  <div className="university">Sreepathy Institute of Management And Technology</div>
-                  <div className="college"><a href="" target="_blank">Bachelor of Technology in
-                    Computer Science</a></div>
-                </div>
-              </div>
-              <div className="experience">
-                <h4>Experience</h4>
-                <div className="content">
-                  <div className="exp-item">
-                    <div className="job">
-                      <a className="company" href="https://carestack.com/" target="_blank">Carestack(Good Methods Software Solutions)</a>
-                      <div className="duration">July 2021 &mdash; Present</div>
-                    </div>
-                    <div className="title">Automation Engineer</div>
-                    <ul className="description">
-                      <li>
-                        Specialized in API automation using xUnit, maintaining the framework and streamlining test automation. Also created a .NET template for other teams to utilize, promoting consistency and best practices across projects.                      </li>
-                      <li>
-                        Actively participated in performance testing during regression phases, executing product load tests and ensuring informed sign-offs through rigorous validation processes using jmeter.                      </li>
-                      <li>
-                        Led the transition of the Azure Database tier from a DTU-based to a VCore-based model, achieving a 40\% reduction in costs while significantly improving database performance.                      </li>
-                      <li>
-                        Collaborated with the database team to resolve parameter sniffing issue in Database, stabilizing performance and enhancing overall system reliability.                      </li>
-                      <li>
-                        Contributed to UI testing with Playwright by automating manual production sanity, significantly reducing QA time and enhancing efficiency.                      </li>
-                      <li>
-                        Implemented contract testing using Pact.io in microservice repositories, ensuring proper service interaction and reducing integration issues. 
-                      </li>
-                      <li>
-                        Developed a web job automation suite using xUnit and Azure libraries, improving regression phase efficiency and reducing manual downtime.                      </li>
-                      <li>
-                        Mentored new team members in automation best practices, accelerating onboarding and fostering collaboration within the team.                    
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="projects">
-                <h4>Projects</h4>
-                <div className="content">
-                  <div className="project-item">
-                    <div className="project-title">Loadtest Automation tool</div>
-                    <p className="project-desc">Established a load test automation tool that schedules JMeter scripts to run against non-production environments, featuring resource management and real-time test result sharing via chat.</p>
-                    <p className="project-desc">Built using Razor Pages and Hangfire, the backend leverages Azure libraries to efficiently scale resources and ensure optimal conditions before each test.</p>
-                  </div>
-                  <div className="project-item">
-                    <div className="project-title">Configuration Management Tool</div>
-                    <p className="project-desc">Designed and built a configuration management tool for QA teams, allowing for seamless adjustment of configuration toggles in non-production environments.</p>
-                    <p className="project-desc">Developed with Razor Pages and SqlClient, this tool enhances testing effectiveness by enabling easy management of various configuration settings within the PMS application.</p>
-                  </div>
-                  <div className="project-item">
-                    <div className="project-title">Data-qa id generator tool</div>
-                    <p className="project-desc"> Developed a console application that serves as a data-qa ID generator using HtmlAgilityPack to integrate data-qa IDs into HTML elements, significantly improving traceability and data management practices. 
-                      </p>
-                  </div>
+                                                                    var Right = React.createClass({
+                                                                      render: function() {
+                                                                        return(
+                                                                          <div className="right">
+                                                                            <div className="right-inner">
+                                                                              <div className="introduction">
+                                                                                <h4>Intro</h4>
+                                                                                <div className="content">
+                                                                                  <p className="intro-p">
+                                                                                    I am a Software Development Engineer with over 3 years of experience, specializing in API and UI automation. I have hands-on expertise with tools like xUnit, Cypress, and Playwright, and lead performance testing efforts to ensure high application reliability. I build automation tools and suites that streamline regression testing and improve development efficiency. Known for optimizing database performance, implementing cost-effective solutions, and mentoring junior team members in automation practices, fostering a culture of continuous learning and improvement.
+      </p><p className="intro-p">Over time, I have built strong expertise in backend development using .NET Core, including designing and implementing RESTful APIs, working with SQL Server, and developing robust solutions in C#. I am now actively transitioning into a Backend Engineer role, where I aim to leverage my automation background to build scalable, secure, and maintainable backend services.
+      </p>
 
-                  <div className="project-item">
-                    <div className="project-title">Request tracker tool</div>
-                    <p className="project-desc"> Developed a console application that reads Azure Kusto queries from Google Sheets and retrieves results from Application Insights across various production environments. 
-                      </p>
-                      <p className="project-desc">This tool streamlines the tracking and analysis of application performance metrics, enhancing visibility into system behavior.</p>
-                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                              <div className="skills">
+                                                                                <h4>Skills</h4>
+                                                                                <div className="content">
+                                                                                  <div className="skill-category">
+                                                                                    <strong>Languages: &nbsp;</strong>
+                                                                                    <span>C#, JavaScript, TypeScript,
+                                                                                      Python, SQL</span>
+                                                                                  </div>
+                                                                                  <div className="skill-category">
+                                                                                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                                                                                    <span>NET Framework / .NET Core,
+                                                                                      Hangfire, Razor, Xunit, Playwright
+                                                                                      </span>
+                                                                                  </div>
+                                                                                  <div className="skill-category">
+                                                                                    <strong>Others: &nbsp;</strong>
+                                                                                    <span>Jmeter, Pact.io, CI/CD, Azure, Jupyter, Git </span>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                              <div className="education">
+                                                                                <h4>Education</h4>
+                                                                                <div className="content">
+                                                                                  <div className="duration">2017 — 2021</div>
+                                                                                  <div className="university">Sreepathy Institute of Management And Technology</div>
+                                                                                  <div className="college"><a href="" target="_blank">Bachelor of Technology in
+                                                                                    Computer Science</a></div>
+                                                                                </div>
+                                                                              </div>
+                                                                              <div className="experience">
+                                                                                <h4>Experience</h4>
+                                                                                <div className="content">
+                                                                                  <div className="exp-item">
+                                                                                    <div className="job">
+                                                                                      <a className="company" href="https://carestack.com/" target="_blank">Carestack(Good Methods Software Solutions)</a>
+                                                                                      <div className="duration">July 2021 &mdash; Present</div>
+                                                                                    </div>
+                                                                                    <div className="title">Automation Engineer</div>
+                                                                                    <ul className="description">
+                                                                                      <li>
+                                                                                        Specialized in API automation using xUnit, maintaining the framework and streamlining test automation. Also created a .NET template for other teams to utilize, promoting consistency and best practices across projects.                      </li>
+                                                                                      <li>
+                                                                                        Actively participated in performance testing during regression phases, executing product load tests and ensuring informed sign-offs through rigorous validation processes using jmeter.                      </li>
+                                                                                      <li>
+                                                                                        Led the transition of the Azure Database tier from a DTU-based to a VCore-based model, achieving a 40\% reduction in costs while significantly improving database performance.                      </li>
+                                                                                      <li>
+                                                                                        Collaborated with the database team to resolve parameter sniffing issue in Database, stabilizing performance and enhancing overall system reliability.                      </li>
+                                                                                      <li>
+                                                                                        Contributed to UI testing with Playwright by automating manual production sanity, significantly reducing QA time and enhancing efficiency.                      </li>
+                                                                                      <li>
+                                                                                        Implemented contract testing using Pact.io in microservice repositories, ensuring proper service interaction and reducing integration issues.
+                                                                                      </li>
+                                                                                      <li>
+                                                                                        Developed a web job automation suite using xUnit and Azure libraries, improving regression phase efficiency and reducing manual downtime.                      </li>
+                                                                                      <li>
+                                                                                        Mentored new team members in automation best practices, accelerating onboarding and fostering collaboration within the team.
+                                                                                      </li>
+                                                                                    </ul>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                              <div className="projects">
+                                                                                <h4>Projects</h4>
+                                                                                <div className="content">
+                                                                                  <div className="project-item">
+                                                                                    <div className="project-title">Loadtest Automation tool</div>
+                                                                                    <p className="project-desc">Established a load test automation tool that schedules JMeter scripts to run against non-production environments, featuring resource management and real-time test result sharing via chat.</p>
+                                                                                    <p className="project-desc">Built using Razor Pages and Hangfire, the backend leverages Azure libraries to efficiently scale resources and ensure optimal conditions before each test.</p>
+                                                                                  </div>
+                                                                                  <div className="project-item">
+                                                                                    <div className="project-title">Configuration Management Tool</div>
+                                                                                    <p className="project-desc">Designed and built a configuration management tool for QA teams, allowing for seamless adjustment of configuration toggles in non-production environments.</p>
+                                                                                    <p className="project-desc">Developed with Razor Pages and SqlClient, this tool enhances testing effectiveness by enabling easy management of various configuration settings within the PMS application.</p>
+                                                                                  </div>
+                                                                                  <div className="project-item">
+                                                                                    <div className="project-title">Data-qa id generator tool</div>
+                                                                                    <p className="project-desc"> Developed a console application that serves as a data-qa ID generator using HtmlAgilityPack to integrate data-qa IDs into HTML elements, significantly improving traceability and data management practices.</p>
+                                                                                  </div>
 
-                  <div className="project-item">
-                    <div className="project-title">AI-Chatbot</div>
-                    <p className="project-desc"> A retrival-based chatbot which focuses on casual interaction with the user and using textual conversation to predict user's emotion. 
-                      </p>
-                      <p className="project-desc">Built using Python, Flask, and SQLite, the chatbot provides a simple and intuitive interface for users to interact with.</p>
-                  </div>
-                 
-                </div>
-              </div>
-              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
-            </div>
-          </div>
-        );
-      }
-    });
+                                                                                  <div className="project-item">
+                                                                                    <div className="project-title">Request tracker tool</div>
+                                                                                    <p className="project-desc"> Developed a console application that reads Azure Kusto queries from Google Sheets and retrieves results from Application Insights across various production environments.</p>
+                                                                                      <p className="project-desc">This tool streamlines the tracking and analysis of application performance metrics, enhancing visibility into system behavior.</p>
+                                                                                  </div>
 
-    ReactDOM.render(
-      <App profileData={DATA}/>,
-      document.getElementById('content')
-    );
+                                                                                  <div className="project-item">
+                                                                                    <a className="project-title" href="https://github.com/ShahinMohamed/AI-Chatbot">AI-Chatbot</a>
+                                                                                    <p className="project-desc"> A retrival-based chatbot which focuses on casual interaction with the user and using textual conversation to predict user's emotion.</p>
+                                                                                      <p className="project-desc">Built using Python, Flask, and SQLite, the chatbot provides a simple and intuitive interface for users to interact with.</p>
+                                                                                  </div>
+
+                                                                                 <div className="project-item">
+                                                                                  <a className="project-title" href="https://github.com/ShahinMohamed/CommunicationMicroservice">Commmunication microservice</a>
+                                                                                       <p className="project-desc">Developed a communication microservice in .NET Core Web API to send transactional SMS messages using the
+                                                     Twilio SMS API, triggered via HTTP endpoint calls.</p>
+                                                                                   <p className="project-desc">Implemented RabbitMQ as a message broker to decouple message publishing (API request) from consumption
+                                               (SMS sending), ensuring high availability and message durability.</p>
+                                                                                                             <p className="project-desc">Created a hosted BackgroundService to act as a persistent consumer, listening to RabbitMQ queues and handling
+                                         outbound SMS delivery through Twilio’s API.</p>
+                                                                                   <p className="project-desc">Implemented multi tenant authentication and authorization using OAuth 2.0, enabling secure, isolated access for
+                                   different clients or organizations.</p>
+                                                                                   <p className="project-desc">Packaged the service as a Docker container for seamless deployment across environments, supporting CI/CD
+                             pipelines.</p>
+                                                                                   <p className="project-desc">Integrated OpenTelemetry for distributed tracing and metrics collection, enabling indepth observability.</p>
+                                                           </div>
+
+
+                                                                             <div className="project-item">
+                                                                         <a className="project-title" href = "https://github.com/ShahinMohamed/Textract">Textract project</a>
+                                                                         <p className="project-desc">      Designed and implemented a robust RESTful API in .NET Core to extract structured financial data from invoice
+            and bill images, specifically CGST, SGST, and Total Amount.</p>
+                                                                           <p className="project-desc">Utilized Amazon Textract for intelligent document processing, enabling OCRbased data extraction from scanned
+      or photographed documents</p>
+                                                                       </div>
+
+
+
+                                                                                </div>
+                                                                              </div>
+                                                                              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+                                                                            </div>
+                                                                          </div>
+                                                                        );
+                                                                      }
+                                                                    });
+
+                                                                    ReactDOM.render(
+                                                                      <App profileData={DATA}/>,
+                                                                      document.getElementById('content')
+                                                                    );
 
 
   </script>
